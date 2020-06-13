@@ -1,0 +1,39 @@
+<%- include('partials/_header'); -%>
+
+    <div class="col-md-5" align=center>
+      <div class="card-body">
+    
+        <form action="/add" method="POST">
+          <div class="form-group">
+            <input type="text" name="username" placeholder="Name" class="form-control" autofocus required>
+          </div>
+          <div class="form-group">
+              <input type="text" name="fathername" placeholder="Father Name" class="form-control" autofocus required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Email" class="form-control" autofocus required>
+            </div>
+            <div class="form-group">
+              <input type="number" name="phone" placeholder="Phone" class="form-control" autofocus required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="college" placeholder="College Name" class="form-control" autofocus required>
+            </div>
+          <div class="form-group">
+            <input type="text" name="per_address" placeholder="Address" class="form-control" required>
+          </div>
+          <div class="form-group">
+              <input type="text" name="password" placeholder="Password" class="form-control" required>
+            </div>
+    
+          <button type="submit" class="btn btn-primary">
+            Save User Details
+          </button>
+          <a href="/open" class="btn btn-info">VIEW USERS</a>
+          
+        </form>
+      </div>
+    </div>
+    
+    
+<%- include('partials/_footer'); -%>
