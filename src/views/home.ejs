@@ -1,7 +1,18 @@
 <%- include('partials/_header'); -%>
 <div ><h2 align=center>User Details</h2></div>
+<form action="/search" method="POST">
+  <div class="form-group">
+    <input type="text" name="searchfield" placeholder="Enter Name To Search" style="position: absolute; top: 25%; left: 50%; transform: translate(-50%,-50%);" class="form-control w-50" autofocus required>
+   <span>
+    <button type="submit" class="btn btn-primary" style="position: absolute; top: 35%; left: 50%; transform: translate(-50%,-50%);" >
+      Search User
+    </button>
+  </span>
+  </div>
+</form>
+
 <div align=right><a href="/" class="btn btn-info" >Add User</a></div>
-<div class="container mt-5">
+<div class="container" style="margin-top: 150px !important;">
     <div class="row">
       <div class="col-md-7">
         <table class="table table-bordered table-hover">
