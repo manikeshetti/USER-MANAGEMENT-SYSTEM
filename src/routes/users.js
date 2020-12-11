@@ -6,6 +6,7 @@ const usercontroller=require('../controllers/usercontroller');
 
 router.get('/',usercontroller.list1);
 router.get('/open',usercontroller.list);
+router.post('/search',usercontroller.search);
 router.post('/add',usercontroller.save);
 router.get('/update/:id',usercontroller.edit);
 router.post('/update/:id',usercontroller.update);
