@@ -72,4 +72,19 @@ controller.delete=(req,res)=>{
     });
 }
 
+controller.search=(req,res)=>{
+    console.log(req.body);
+    req.getConnection((err,conn)=>{
+        conn.query(`SELECT * FROM users1 where username LIKE '%${req.body.searchfield}%'`,(err,user)=>{
+            if(err){
+                res.json(err);
+            }
+            console.log(user)
+            res.render('home',{
+                data:user
+            });
+        });
+    });
+};
+
 module.exports=controller;
